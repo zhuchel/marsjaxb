@@ -1,4 +1,4 @@
-package de.bundesbank;
+package de.jaxb;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
@@ -11,8 +11,10 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
-import de.bundesbank.mars.Book;
-import de.bundesbank.mars.Library;
+import de.jaxb.lib.Book;
+import de.jaxb.lib.Library;
+
+
 
 public class Xslt {
 

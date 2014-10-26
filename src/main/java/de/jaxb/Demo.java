@@ -1,12 +1,12 @@
-package de.bundesbank;
+package de.jaxb;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.Marshaller;
 import javax.xml.namespace.QName;
 
-import de.bundesbank.mars.Address;
-import de.bundesbank.mars.Customer;
+import de.jaxb.Address;
+import de.jaxb.Customer;
 
 public class Demo {
 

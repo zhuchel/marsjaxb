@@ -6,7 +6,7 @@
 //
 
 
-package de.bundesbank.mars;
+package de.jaxb.lib;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

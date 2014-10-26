@@ -1,4 +1,4 @@
-package de.bundesbank;
+package de.jaxb;
 
 import javax.xml.namespace.NamespaceContext;
 import javax.xml.stream.XMLStreamException;

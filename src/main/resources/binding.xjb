@@ -11,19 +11,19 @@
 		</jxb:schemaBindings>
 
 		<jxb:bindings node="//xs:complexType[@name='address']">
-			<inheritance:extends>de.bundesbank.mars.ContactInfo
+			<inheritance:extends>de.jaxb.ContactInfo
 			</inheritance:extends>
 		</jxb:bindings>
 
 		<jxb:bindings schemaLocation="extended-jaxb.xsd" node="//xs:complexType[@name='contactInfo']">
 			<annox:annotate target="class">
 				<annox:annotate annox:class="javax.xml.bind.annotation.XmlSeeAlso"
-					value="de.bundesbank.mars.Address" />
+					value="de.jaxb.Address" />
 			</annox:annotate>
 		</jxb:bindings>
 
 		<jxb:bindings node=".//xs:element[@type='address']">
-			<jxb:class ref="de.bundesbank.mars.ContactInfo" />
+			<jxb:class ref="de.jaxb.ContactInfo" />
 		</jxb:bindings>
 
 	</jxb:bindings>

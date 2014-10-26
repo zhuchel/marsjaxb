@@ -6,7 +6,7 @@
 //
 
 
-package de.bundesbank.mars;
+package de.jaxb.lib;
 
 import java.util.ArrayList;
 import java.util.List;

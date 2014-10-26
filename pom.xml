@@ -98,7 +98,7 @@
 					<schemaDirectory>src/main/resources</schemaDirectory>
 					<generateDirectory>src/main/java/generated</generateDirectory>
 					<schemaFiles>jaxb.xsd</schemaFiles>
-					<packageName>de.bundesbank.mars</packageName>
+					<packageName>de.jaxb</packageName>
 					<bindingDirectory>src/main/resources</bindingDirectory>
 					<bindingFiles>binding.xjb</bindingFiles>
 					<extension>true</extension>
