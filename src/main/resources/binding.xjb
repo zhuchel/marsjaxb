@@ -1,0 +1,30 @@
+<jxb:bindings version="1.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+	xmlns:annox="http://annox.dev.java.net" extensionBindingPrefixes="annox"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<jxb:bindings schemaLocation="jaxb.xsd" node="/xs:schema">
+
+		<jxb:schemaBindings>
+			<jxb:nameXmlTransform>
+				<jxb:elementName suffix="Element" />
+			</jxb:nameXmlTransform>
+		</jxb:schemaBindings>
+
+		<jxb:bindings node="//xs:complexType[@name='address']">
+			<inheritance:extends>de.bundesbank.mars.ContactInfo
+			</inheritance:extends>
+		</jxb:bindings>
+
+		<jxb:bindings schemaLocation="extended-jaxb.xsd" node="//xs:complexType[@name='contactInfo']">
+			<annox:annotate target="class">
+				<annox:annotate annox:class="javax.xml.bind.annotation.XmlSeeAlso"
+					value="de.bundesbank.mars.Address" />
+			</annox:annotate>
+		</jxb:bindings>
+
+		<jxb:bindings node=".//xs:element[@type='address']">
+			<jxb:class ref="de.bundesbank.mars.ContactInfo" />
+		</jxb:bindings>
+
+	</jxb:bindings>
+</jxb:bindings>
