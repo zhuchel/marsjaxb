@@ -2,22 +2,47 @@
 
 	<xs:include schemaLocation="extended-jaxb.xsd" />
 
+	<xs:complexType name="operation" abstract="true">
+		<xs:sequence />
+	</xs:complexType>
+
 	<xs:element name="customer" type="customer" />
 
 	<xs:complexType name="customer">
 		<xs:sequence>
-			<xs:element name="contactInfo" type="address" minOccurs="0" />
+			<xs:element name="updateOp" type="update" minOccurs="0" />
+			<xs:element name="depeteOP" type="delete" minOccurs="0" />
 		</xs:sequence>
 	</xs:complexType>
 
+	<xs:complexType name="update">
+		<xs:complexContent>
+			<xs:extension base="operation">
+				<xs:sequence>
+					<xs:element name="contactInfo" type="address" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="delete">
+		<xs:complexContent>
+			<xs:extension base="operation">
+				<xs:sequence>
+					<xs:element name="contactInfo" type="address" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
 	<xs:complexType name="address">
-		<!-- xs:complexContent>
-			<xs:extension base="contactInfo"-->
+		<xs:complexContent>
+			<xs:extension base="contactInfo">
 				<xs:sequence>
 					<xs:element name="street" type="xs:string" minOccurs="0" />
 				</xs:sequence>
-			<!-- /xs:extension>
-		</xs:complexContent-->
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 
 </xs:schema>

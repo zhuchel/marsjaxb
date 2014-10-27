@@ -14,7 +14,15 @@ public class Demo {
 		Customer customer = new Customer();
 		Address info = new Address();
 		info.setStreet("1 A Street");
-		customer.setContactInfo(info);
+		
+		Delete delete = new Delete();
+		delete.setContactInfo(info);
+		customer.setDepeteOP(delete);
+		
+		Update update = new Update();
+		update.setContactInfo(info);
+		customer.setUpdateOp(update);;
+		
 //
 		QName qname = new QName("http://www.namespace.com/schema/My", "My");
 		Marshaller marshaller = JAXBContext.newInstance(Customer.class)

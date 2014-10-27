@@ -47,42 +47,6 @@
 		</resources>
 		<plugins>
 			<plugin>
-				<groupId>org.jvnet.jaxb2.maven2</groupId>
-				<artifactId>maven-jaxb2-plugin</artifactId>
-				<version>0.10.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<extension>true</extension>
-					<args>
-						<arg>-Xinheritance</arg>
-						<arg>-Xannotate</arg>
-					</args>
-					<plugins>
-						<plugin>
-							<groupId>org.jvnet.jaxb2_commons</groupId>
-							<artifactId>jaxb2-basics</artifactId>
-							<version>0.9.0</version>
-						</plugin>
-						<plugin>
-							<groupId>org.jvnet.jaxb2_commons</groupId>
-							<artifactId>jaxb2-basics-annotate</artifactId>
-							<version>1.0.0</version>
-						</plugin>
-						<plugin>
-							<groupId>org.jvnet.annox</groupId>
-							<artifactId>annox</artifactId>
-							<version>1.0.0</version>
-						</plugin>
-					</plugins>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
 				<version>1.6</version>
@@ -103,7 +67,7 @@
 					<bindingFiles>binding.xjb</bindingFiles>
 					<extension>true</extension>
 					<arguments>-Xinheritance -Xannotate</arguments>
-					<verbose>true</verbose>
+					<!-- verbose>true</verbose-->
 				</configuration>
 				<dependencies>
 					<dependency>
