@@ -36,13 +36,9 @@
 	</xs:complexType>
 
 	<xs:complexType name="address">
-		<xs:complexContent>
-			<xs:extension base="contactInfo">
-				<xs:sequence>
-					<xs:element name="street" type="xs:string" minOccurs="0" />
-				</xs:sequence>
-			</xs:extension>
-		</xs:complexContent>
+		<xs:sequence>
+			<xs:element name="street" type="xs:string" minOccurs="0" />
+		</xs:sequence>
 	</xs:complexType>
 
 </xs:schema>
