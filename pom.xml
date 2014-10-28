@@ -11,21 +11,16 @@
 			<artifactId>jaxws-rt</artifactId>
 			<version>2.2.3</version>
 		</dependency>
-		<dependency>
+		<!-- dependency>
 			<groupId>org.jvnet.jaxb2_commons</groupId>
 			<artifactId>jaxb2-basics</artifactId>
-			<version>0.9.0</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jvnet.jaxb2_commons</groupId>
-			<artifactId>jaxb2-basics-runtime</artifactId>
-			<version>0.9.0</version>
+			<version>0.7.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.jvnet.annox</groupId>
 			<artifactId>annox</artifactId>
-			<version>1.0.1</version>
-		</dependency>
+			<version>0.5.1</version>
+		</dependency-->
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -49,7 +44,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>jaxb2-maven-plugin</artifactId>
-				<version>1.6</version>
+				<version>1.5</version>
 				<executions>
 					<execution>
 						<id>xjc</id>
@@ -67,23 +62,22 @@
 					<bindingFiles>binding.xjb</bindingFiles>
 					<extension>true</extension>
 					<arguments>-Xinheritance -Xannotate</arguments>
-					<!-- verbose>true</verbose-->
 				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.jvnet.jaxb2_commons</groupId>
 						<artifactId>jaxb2-basics</artifactId>
-						<version>0.9.0</version>
+						<version>0.7.0</version>
 					</dependency>
 					<dependency>
 						<groupId>org.jvnet.jaxb2_commons</groupId>
 						<artifactId>jaxb2-basics-annotate</artifactId>
-						<version>1.0.0</version>
+						<version>0.6.2</version>
 					</dependency>
 					<dependency>
 						<groupId>org.jvnet.annox</groupId>
 						<artifactId>annox</artifactId>
-						<version>1.0.0</version>
+						<version>0.5.1</version>
 					</dependency>
 				</dependencies>
 			</plugin>
